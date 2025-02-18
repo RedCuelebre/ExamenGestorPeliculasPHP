@@ -1,0 +1,224 @@
+/* Estilos generales para la plataforma de streaming */
+/* Paleta de colores */
+:root {
+    --primary-color: #FF6F61;   /* Rojo suave */
+    --secondary-color: #4CAF50; /* Verde */
+    --background-color: #F4F4F4; /* Gris claro */
+    --card-background: #FFFFFF; /* Blanco */
+    --text-color: #333333; /* Gris oscuro */
+    --button-hover: #45a049; /* Verde oscuro */
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado - Título */
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Formulario */
+.movie-form {
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.movie-form input,
+.movie-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.movie-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.movie-form button:hover {
+    background-color: var(--button-hover);
+}
+
+/* Listado de películas */
+#movie-list {
+    margin-top: 30px;
+}
+
+.movie {
+    background-color: var(--card-background);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.movie:hover {
+    transform: translateY(-5px);
+}
+
+.movie h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.movie p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Reseteo de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para el body */
+body {
+    padding: 20px;
+    margin: 0;
+}
+
+/* Estilos para el encabezado */
+header {
+    margin-bottom: 40px;
+}
+
+/* Estilo para el formulario de agregar película */
+.movie-form {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el listado de películas */
+.movie {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie h2 {
+    font-size: 2rem;
+}
+
+.movie p {
+    font-size: 1rem;
+}
+
+/* Media Queries para hacer la página responsive */
+
+/* Pantallas de tamaño pequeño (móviles en modo retrato) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .movie-form {
+        padding: 15px;
+    }
+
+    .movie-form input,
+    .movie-form textarea {
+        padding: 8px;
+    }
+
+    .movie-form button {
+        padding: 10px;
+    }
+
+    .movie h2 {
+        font-size: 1.4rem;
+    }
+
+    .movie p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Pantallas medianas (tabletas en modo retrato o móviles grandes) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .movie-form {
+        max-width: 90%;
+        padding: 18px;
+    }
+
+    .movie h2 {
+        font-size: 1.6rem;
+    }
+
+    .movie p {
+        font-size: 1rem;
+    }
+}
+
+/* Pantallas grandes (escritorios) */
+@media (min-width: 1024px) {
+    .movie-form {
+        max-width: 600px;
+    }
+
+    .movie h2 {
+        font-size: 1.8rem;
+    }
+
+    .movie p {
+        font-size: 1rem;
+    }
+}
